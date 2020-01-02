@@ -62,6 +62,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENCE
+  - _posts/2020-01-02-upcoming.md
 
 # -----------
 # CloudCannon
