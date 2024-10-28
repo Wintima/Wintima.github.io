@@ -3,56 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wintima</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <title>Wintima Foundation</title>
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="logo">
-            <a href="https://wintima.org/">
-                <img src="images/logo.png" alt="Wintima Logo">
-            </a>
+            <img src="/images/logo.png" alt="Wintima Foundation Logo">
         </div>
-        <button class="donate-button">
-            <a href= "donate.html">
-                Donate
-            </a>
-        </button>
+        <button class="donate-btn">Donate</button>
     </header>
-    <main class="main-content">
-        <div class="left-section">
-            <h1>Wintima Foundation</h1>
-            <img src="images/logo.png" alt="Wintima Logo" class="main-logo">
-            <h2>restoring smiles<br>impacting lives</h2>
-        </div>
-        <div class="divider"></div>
-        <div class="right-section">
-            <div class="slideshow-container">
-                <div class="mySlides">
-                    <img src="images/announcement.png" alt="Family Image 1">
+
+    <main>
+        <div class="content">
+            
+            <div class="content-wrapper">
+                <div class="logo-tagline">
+                    <div class="logo-large">
+                        <h1>Wintima Foundation</h1>
+                        <img src="/images/logo.png" alt="Wintima Foundation Large Logo">
+                    </div>
+                    <p class="tagline">restoring smiles<br>impacting lives</p>
                 </div>
-                <div class="mySlides">
-                    <img src="images/borehole.png" alt="Family Image 2">
-                </div>
-                <div class="mySlides">
-                    <img src="images/furniture.png" alt="Family Image 3">
+                <div class="divider"></div>
+                <div class="slideshow">
+                    <img src="/images/announcement.png" alt="Slideshow Image 1" class="active">
+                    <img src="/images/borehole.png" alt="Slideshow Image 2">
+                    <img src="/images/furniture.png" alt="Slideshow Image 3">
                 </div>
             </div>
         </div>
+        
+        <div id="description" class="description-menu-toggle">Click here to get started</div>
+
+        <nav class="menu-toggle">
+            <button id="menuBtn"><i class="fas fa-plus"></i></button>
+        </nav>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar"></i> Events</a></li>
+                <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="join.html"><i class="fas fa-handshake"></i> Join Us</a></li>
+            </ul>
+        </nav>
     </main>
 
-
     <footer>
-        <ul class="contact-icons">
-            <li><a href="mailto:wintimafoundation@gmail.com"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://www.instagram.com/wintima.foundation/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        </ul>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
