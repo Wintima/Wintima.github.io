@@ -32,3 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(showNextSlide, 4000);
 });
+
+// Add interactivity to the navigation bar
+document.querySelectorAll(".sidebar .menu a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Remove active class from all links
+      document.querySelectorAll(".sidebar .menu a").forEach((link) => {
+        link.classList.remove("active");
+      });
+  
+      // Add active class to the clicked link
+      e.target.classList.add("active");
+    });
+  });
+  
+  // Toggle the donate button hover effect
+  const donateButton = document.querySelector(".donate");
+  donateButton.addEventListener("mouseover", () => {
+    donateButton.style.backgroundColor = "#ff4040";
+  });
+  donateButton.addEventListener("mouseout", () => {
+    donateButton.style.backgroundColor = "#a00000";
+  });
+  
+  // Language selector confirmation message
+  const languageSelector = document.getElementById("language");
+  languageSelector.addEventListener("change", () => {
+    alert(`Language changed to: ${languageSelector.value}`);
+  });

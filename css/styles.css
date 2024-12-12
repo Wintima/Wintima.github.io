@@ -403,4 +403,35 @@ footer {
     .slideshow {
         height: 200px;
     }
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header .nav a {
+        margin: 10px 0;
+    }
+    
+    .footer {
+        text-align: center;
+    }
+    
+    .footer div {
+        margin: 10px 0;
+    }
 }
