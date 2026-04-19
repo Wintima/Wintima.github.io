@@ -15,18 +15,18 @@
       <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
         <img src="images/logo.png" alt="Wintima Foundation">
         <span class="logo-name">Wintima Foundation</span>
-    </a>
-</div>
-<button class="donate-btn" onclick="window.location.href='donate.html'">
-    Donate
-</button>
-</header>
+      </a>
+    </div>
+    <button class="donate-btn" onclick="window.location.href='donate.html'">
+      Donate
+    </button>
+  </header>
 
-<main>
+  <main>
 
     <div class="hero">
       <h1>restoring <em>smiles</em><br>impacting lives</h1>
-  </div>
+    </div>
 
 <!-- ═══ UPDATE FOR EACH PROJECT: 
 change image src, label, title, sub ═══ -->
@@ -38,7 +38,7 @@ change image src, label, title, sub ═══ -->
     <p class="spotlight-title">Yizidug School Refurbishment</p>
     <p class="spotlight-sub">Desks &middot; Classroom painting &middot; Windows</p>
     <button class="spotlight-more" id="learnMoreBtn">Learn more →</button>
-</div>
+  </div>
 </div>
 
 
@@ -63,106 +63,94 @@ change image src, label, title, sub ═══ -->
             <th>Item</th>
             <th>Description</th>
             <th>Cost (GHS)</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Classroom Doors</td>
-        <td>Repair and replace broken doors for 6 classrooms</td>
-        <td>12,000</td>
-    </tr>
-    <tr>
-        <td>Windows</td>
-        <td>Replacement and fixing of damaged frames</td>
-        <td>10,000</td>
-    </tr>
-    <tr>
-        <td>Roofing</td>
-        <td>Repair of leaking roofs for classrooms</td>
-        <td>10,000</td>
-    </tr>
-    <tr>
-        <td>Labour &amp; Misc.</td>
-        <td>Skilled labour, transportation, painting of 6 classrooms</td>
-        <td>18,000</td>
-    </tr>
-    <tr class="breakdown-total">
-        <td colspan="2">Total</td>
-        <td>50,000</td>
-    </tr>
-</tbody>
-</table>
-</div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Classroom Doors</td>
+            <td>Repair and replace broken doors for 6 classrooms</td>
+            <td>12,000</td>
+          </tr>
+          <tr>
+            <td>Windows</td>
+            <td>Replacement and fixing of damaged frames</td>
+            <td>10,000</td>
+          </tr>
+          <tr>
+            <td>Roofing</td>
+            <td>Repair of leaking roofs for classrooms</td>
+            <td>10,000</td>
+          </tr>
+          <tr>
+            <td>Labour &amp; Misc.</td>
+            <td>Skilled labour, transportation, painting of 6 classrooms</td>
+            <td>18,000</td>
+          </tr>
+          <tr class="breakdown-total">
+            <td colspan="2">Total</td>
+            <td>50,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<button class="event-donate-btn" onclick="window.location.href='donate.html'">
-  Support this project →
-</button>
-</div>
+    <button class="event-donate-btn" onclick="window.location.href='donate.html'">
+      Support this project →
+    </button>
+  </div>
 </div>
 
 <div class="explore-wrap">
-  <button class="explore-btn" id="exploreBtn" aria-expanded="false">
-    <span>Explore</span>
-    <div class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+  <nav class="top-pill" aria-label="Site navigation">
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="team.html">Team</a>
+  </nav>
+  <div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
-</button>
-<nav class="menu" id="menu" aria-label="Site navigation">
-    <ul>
-      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
-      <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
-      <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
-      <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-  </ul>
-</nav>
 </div>
 
 </main>
 
 <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://www.instagram.com/wintima.foundation/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
+      <i class="fab fa-instagram"></i>
     </a>
     <a href="mailto:wintimafoundation@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </a>
-</div>
+  </div>
 </footer>
 
 <script>
-    const exploreBtn = document.getElementById('exploreBtn');
-    const menu = document.getElementById('menu');
-    const learnMoreBtn = document.getElementById('learnMoreBtn');
-    const eventOverlay = document.getElementById('eventOverlay');
-    const eventClose = document.getElementById('eventClose');
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  const eventOverlay = document.getElementById('eventOverlay');
+  const eventClose = document.getElementById('eventClose');
 
-    exploreBtn.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('open');
-      exploreBtn.setAttribute('aria-expanded', isOpen);
+  learnMoreBtn.addEventListener('click', () => {
+    eventOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
   });
 
-    learnMoreBtn.addEventListener('click', () => {
-      eventOverlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
+  eventClose.addEventListener('click', closeOverlay);
+  eventOverlay.addEventListener('click', (e) => {
+    if (e.target === eventOverlay) closeOverlay();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeOverlay();
   });
 
-    eventClose.addEventListener('click', closeOverlay);
-    eventOverlay.addEventListener('click', (e) => {
-      if (e.target === eventOverlay) closeOverlay();
-  });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeOverlay();
-  });
-
-    function closeOverlay() {
-      eventOverlay.classList.remove('open');
-      document.body.style.overflow = '';
+  function closeOverlay() {
+    eventOverlay.classList.remove('open');
+    document.body.style.overflow = '';
   }
 </script>
 
