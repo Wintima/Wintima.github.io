@@ -175,8 +175,11 @@ main {
 }
 
 .explore-btn {
-  background: none;
-  border: none;
+  background: rgba(128,20,23,0.12);
+border: 1px solid rgba(255,255,255,0.25);
+color: var(--red);
+  border-radius: 500px;
+  padding: 8px 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -184,13 +187,13 @@ main {
   gap: 6px;
   font-family: var(--font-sans);
   font-size: 13px;
-  color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: color var(--transition);
+  transition: border-color var(--transition), color var(--transition);
 }
 
 .explore-btn:hover {
+  border-color: var(--surface);
   color: var(--red);
 }
 
@@ -203,7 +206,7 @@ main {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--border);
+  background: var(--red);
   transition: background var(--transition);
   animation: pulse 1.8s ease-in-out infinite;
 }
