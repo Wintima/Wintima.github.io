@@ -19,7 +19,7 @@ IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
 METADATA = {
     'kolemasega-2015': {
         'title': 'Kolemasega Basic School',
-        'meta':  'December 2015 · Zaari, Upper East',
+        'meta':  'December 2015 · Kolemasega, Upper East',
     },
     'frafra-2016': {
         'title': 'Frafra Catholic School',
@@ -27,7 +27,7 @@ METADATA = {
     },
     'zaari-2017': {
         'title': 'Zaari Primary School',
-        'meta':  'December 2017 · Upper East',
+        'meta':  'December 2017 · Zaari, Upper East',
     },
     'yizidug-2018': {
         'title': 'Yizidug Basic School',
@@ -48,6 +48,11 @@ METADATA = {
     'kpatua-2024': {
         'title': 'Kpatua Primary School',
         'meta':  'December 2024 · Kpatua, Upper East',
+    },
+    
+    'yizidug-2025': {
+        'title': 'Yizidug Primary School',
+        'meta':  'May 2025 · Yizidug, Upper East',
     },
 }
 

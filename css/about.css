@@ -85,7 +85,6 @@
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -93,8 +92,6 @@
 }
 
 .project-item {
-  display: flex;
-  gap: 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -102,42 +99,62 @@
   border-bottom: none;
 }
 
-.project-meta {
-  width: 160px;
-  flex-shrink: 0;
-  padding: 1.25rem 1rem 1.25rem 1.25rem;
-  border-right: 1px solid var(--border);
+.project-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 1.25rem;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition);
+}
+
+.project-toggle:hover {
   background: var(--bg);
 }
 
+.project-toggle-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 .project-date {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text);
+  font-family: var(--font-sans);
 }
 
-.project-location {
-  font-size: 0.75rem;
+.project-school {
+  font-size: 0.8rem;
   color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  font-family: var(--font-sans);
 }
 
-.project-location i {
-  color: var(--red);
-  font-size: 0.7rem;
+
+.project-chevron {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform var(--transition);
+  flex-shrink: 0;
 }
 
 .project-body {
-  flex: 1;
-  padding: 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  padding: 0 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.project-item.open .project-body {
+  padding: 0 1.25rem 1.25rem;
 }
 
 .project-img {
@@ -146,12 +163,7 @@
   object-fit: cover;
   border-radius: 6px;
   display: block;
-}
-
-.project-school {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text);
+  margin-top: 4px;
 }
 
 .project-detail {
@@ -223,15 +235,6 @@
 
   .project-item {
     flex-direction: column;
-  }
-
-  .project-meta {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .about-main {

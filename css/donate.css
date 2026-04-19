@@ -181,6 +181,25 @@
   text-decoration: underline;
 }
 
+/* ── Reports ── */
+.reports-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reports-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.reports-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .top-pill a {
