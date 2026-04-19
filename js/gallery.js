@@ -51,8 +51,6 @@ function openOverlay(project) {
 // ── Lightbox ──
 const lightbox     = document.getElementById('lightbox');
 const lightboxImg  = document.getElementById('lightboxImg');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
 
 let currentProject = null;
 let currentIndex   = 0;
@@ -67,9 +65,7 @@ function openLightbox(project, index) {
 function showLightboxImage() {
   const filename = currentProject.images[currentIndex];
   lightboxImg.src = currentProject.folder + filename;
-  lightboxPrev.style.opacity = currentIndex === 0 ? '0.3' : '1';
-  lightboxNext.style.opacity = currentIndex === currentProject.images.length - 1 ? '0.3' : '1';
-}
+  }
 
 function lightboxPrevImage() {
   if (currentIndex > 0) { currentIndex--; showLightboxImage(); }
@@ -84,8 +80,6 @@ function closeLightbox() {
   lightboxImg.src = '';
 }
 
-lightboxPrev.addEventListener('click', e => { e.stopPropagation(); lightboxPrevImage(); });
-lightboxNext.addEventListener('click', e => { e.stopPropagation(); lightboxNextImage(); });
 lightbox.addEventListener('click', e => {
   if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
 });
