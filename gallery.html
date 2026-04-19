@@ -2,53 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wintima Foundation</title>
-  <link rel="stylesheet" href="css/blogstyle.css">
+  <title>Gallery — Wintima Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/gallery.css">
   <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
-  <script src="js/blog.js"></script>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
+
+  <header>
     <div class="logo">
-        <img src="/images/logo.png" alt="Wintima Foundation Logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="images/logo.png" alt="Wintima Foundation">
+        <span class="logo-name">Wintima Foundation</span>
+      </a>
     </div>
-    <nav class="nav">
-      <a href="#"><strong>Home</strong></a>
-      <a href="#"><strong>About Us</strong></a>
-      <button class="donate-btn">Donate</button>
-    </nav>
-    <div class="menu-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+    <button class="donate-btn" onclick="window.location.href='donate.html'">
+      Donate
+    </button>
   </header>
 
-  <div class="sidebar">
-    <div class="menu">
-        <div class="menu-item" data-text="Blog">
-          <a href="blog.html"><i class="fas fa-pen"></i><span>Blog</span></a>
-        </div>
-        <div class="menu-item" data-text="Event">
-            <a href="events.html"><i class="fas fa-calendar-alt"></i><span>Events</span></a>
-        </div>
-        <div class="menu-item" data-text="Gallery">
-            <a href="gallery.html"><i class="fas fa-image"></i><span>Gallery</span></a>
-        </div>
-        <div class="menu-item" data-text="Team">
-            <a href="team.html"><i class="fas fa-users"></i><span>Team</span></a>
-        </div>
+  <div class="pill-wrap">
+    <nav class="top-pill" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </div>
+
+  <!-- ── Slideshow ── -->
+  <!-- ═══ HIGHLIGHTS: replace furniture.png with highlight images ═══ -->
+  <div class="gallery-slideshow">
+    <div class="slide active">
+      <img src="images/furniture.png" alt="Highlight 1">
+      <div class="slide-overlay">
+        <p class="slide-label">Yizidug Basic School · 2021</p>
+        <p class="slide-caption">Box Library Project</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/furniture.png" alt="Highlight 2">
+      <div class="slide-overlay">
+        <p class="slide-label">Kpatua Primary School · 2024</p>
+        <p class="slide-caption">Dual Desk Supply</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/furniture.png" alt="Highlight 3">
+      <div class="slide-overlay">
+        <p class="slide-label">Nisbuliga Basic School · 2019</p>
+        <p class="slide-caption">Uniforms &amp; Sanitary Pads</p>
+      </div>
+    </div>
+    <div class="slide-dots" id="slideDots"></div>
+  </div>
+
+  <!-- ── Projects ── -->
+  <main class="gallery-main">
+    <p class="section-label">Projects</p>
+    <h2 class="gallery-title">Nine years of impact</h2>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </main>
+
+  <!-- ── Gallery overlay ── -->
+  <div class="gallery-overlay" id="galleryOverlay" aria-modal="true" role="dialog">
+    <div class="gallery-modal">
+      <button class="gallery-close" id="galleryClose" aria-label="Close">&#x2715;</button>
+      <p class="section-label" id="overlayLabel"></p>
+      <h2 class="overlay-title" id="overlayTitle"></h2>
+      <div class="overlay-grid" id="overlayGrid"></div>
     </div>
   </div>
 
-  <div class="floating-footer">
-    <a href="#"><i class="fas fa-home"></i> Home</a>
-    <div class="divider"></div>
-    <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
-    <div class="divider"></div>
-    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-nav" id="lightboxPrev">&#8592;</button>
+    <img id="lightboxImg" src="" alt="Full size photo">
+    <button class="lightbox-nav" id="lightboxNext">&#8594;</button>
   </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/wintima.foundation/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:wintimafoundation@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/gallery-data.js"></script>
+  <script src="js/gallery.js"></script>
+
 </body>
 </html>

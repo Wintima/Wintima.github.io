@@ -1,0 +1,138 @@
+/* ── Blog main ── */
+.blog-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.blog-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* ── Blog grid ── */
+.blog-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Blog card ── */
+.blog-card {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.blog-card-img {
+  width: 220px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-body {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: 0.05em;
+}
+
+.post-location {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-location i {
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+.blog-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.blog-card-summary {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.blog-read-more {
+  font-size: 12px;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .top-pill a {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blog-main {
+    padding: 1.5rem 1rem 2rem;
+  }
+}

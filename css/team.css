@@ -1,0 +1,139 @@
+/* ── Team main ── */
+.team-main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.team-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: -1rem;
+}
+
+/* ── Team grid — 4 columns ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+/* ── Member ── */
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+/* ── Avatar wrap ── */
+.avatar-wrap {
+  width: 72px;
+  height: 72px;
+}
+
+.member-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--border);
+}
+
+/* ── Fallback initial circle ── */
+.avatar-fallback {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.av-red   { background: #fce8e8; color: #801417; }
+.av-teal  { background: #e1f5ee; color: #0f6e56; }
+.av-blue  { background: #e6f1fb; color: #185fa5; }
+.av-amber { background: #faeeda; color: #854f0b; }
+.av-green { background: #eaf3de; color: #3b6d11; }
+
+/* ── Member info ── */
+.member-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.member-role {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* ── Join block ── */
+.join-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.join-block p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.join-link {
+  font-size: 0.875rem;
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.join-link:hover { opacity: 0.75; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .top-pill a {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-main {
+    padding: 1.5rem 1rem 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

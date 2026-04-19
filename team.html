@@ -2,45 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wintima Foundation</title>
-  <link rel="stylesheet" href="css/blogstyle.css">
+  <title>Team — Wintima Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/team.css">
   <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
-  <script src="js/blog.js"></script>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
+
+  <header>
     <div class="logo">
-        <img src="/images/logo.png" alt="Wintima Foundation Logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="images/logo.png" alt="Wintima Foundation">
+        <span class="logo-name">Wintima Foundation</span>
+      </a>
     </div>
-    <nav class="nav">
-      <a href="#"><strong>Home</strong></a>
-      <a href="#"><strong>About Us</strong></a>
-      <button class="donate-btn">Donate</button>
-    </nav>
-    <div class="menu-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+    <button class="donate-btn" onclick="window.location.href='donate.html'">
+      Donate
+    </button>
   </header>
 
-  <div class="sidebar">
-    <div class="menu">
-        <div class="menu-item" data-text="Blog">
-          <a href="blog.html"><i class="fas fa-pen"></i><span>Blog</span></a>
+  <div class="pill-wrap">
+    <nav class="top-pill" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="team.html" class="active">Team</a>
+    </nav>
+  </div>
+
+  <main class="team-main">
+
+    <p class="section-label">Meet the people behind the work</p>
+
+    <!-- ═══ TEAM MEMBERS
+         To add a member: copy any .member block and update:
+         - img src: path to photo in images/team/
+         - data-initials: 2 letter fallback
+         - data-color: av-red | av-teal | av-blue | av-amber | av-green
+         - member-name and member-role text
+         If the image is missing or fails to load, the coloured initial circle shows instead.
+    ═══ -->
+    <div class="team-grid">
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/janet-dauda.jpg" alt="Janet Zeylisa Dauda"
+            class="member-photo"
+            data-initials="JD" data-color="av-red"
+            onerror="showFallback(this)">
         </div>
-        <div class="menu-item" data-text="Event">
-            <a href="events.html"><i class="fas fa-calendar-alt"></i><span>Events</span></a>
+        <p class="member-name">Janet Zeylisa Dauda</p>
+       <!--<p class="member-role">Founder &amp; Executive Director</p>-->
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="EA" data-color="av-teal"
+            onerror="showFallback(this)">
         </div>
-        <div class="menu-item" data-text="Gallery">
-            <a href="gallery.html"><i class="fas fa-image"></i><span>Gallery</span></a>
+        <p class="member-name">Esmeralda Afenyo</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="GA" data-color="av-blue"
+            onerror="showFallback(this)">
         </div>
-        <div class="menu-item" data-text="Team">
-            <a href="team.html"><i class="fas fa-users"></i><span>Team</span></a>
+        <p class="member-name">Gilgal Ansah</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="BB" data-color="av-amber"
+            onerror="showFallback(this)">
         </div>
+        <p class="member-name">Beryl Brown</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="PT" data-color="av-green"
+            onerror="showFallback(this)">
+        </div>
+        <p class="member-name">Prince Tuffour</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="PKD" data-color="av-red"
+            onerror="showFallback(this)">
+        </div>
+        <p class="member-name">Paa Kwabena Dankyi</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="HF" data-color="av-teal"
+            onerror="showFallback(this)">
+        </div>
+        <p class="member-name">Hussein Faara</p>
+      </div>
+
+      <div class="member">
+        <div class="avatar-wrap">
+          <img src="images/team/placeholder.jpg" alt="Team Member"
+            class="member-photo"
+            data-initials="SO" data-color="av-blue"
+            onerror="showFallback(this)">
+        </div>
+        <p class="member-name">Selina Oduro</p>
+      </div>
+
     </div>
-</div>
+
+    <div class="join-block">
+      <p>Want to volunteer or join our team?</p>
+      <a href="mailto:wintimafoundation@gmail.com" class="join-link">Get in touch →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/wintima.foundation/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:wintimafoundation@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function showFallback(img) {
+      const initials = img.dataset.initials || '??';
+      const color    = img.dataset.color || 'av-red';
+      const fallback = document.createElement('div');
+      fallback.className = `avatar-fallback ${color}`;
+      fallback.textContent = initials;
+      img.parentNode.replaceChild(fallback, img);
+    }
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,198 @@
+/* ── Donate main ── */
+.donate-main {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Header ── */
+.donate-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.donate-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.donate-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ── Options ── */
+.donate-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* ── Card ── */
+.donate-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.donate-card:last-child {
+  border-bottom: none;
+}
+
+.donate-card:hover:not(.donate-card--soon) {
+  background: var(--bg);
+}
+
+.donate-card--soon {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.donate-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--red);
+  font-size: 1rem;
+}
+
+.donate-card-body {
+  flex: 1;
+}
+
+.donate-card-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.donate-card-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.donate-card-arrow {
+  font-size: 1rem;
+  color: var(--muted);
+  transition: transform var(--transition);
+}
+
+.donate-card-badge {
+  font-size: 11px;
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* ── MoMo details ── */
+.momo-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.momo-details.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.momo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.momo-row:last-of-type {
+  border-bottom: none;
+}
+
+.momo-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.momo-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.momo-note {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 8px 1.25rem 12px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ── Contact ── */
+.donate-contact {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.donate-contact a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.donate-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .top-pill a {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .donate-main {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .donate-header h2 {
+    font-size: 1.4rem;
+  }
+}

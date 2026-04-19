@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wintima Foundation</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wintima Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/images/logo.png" alt="Wintima Foundation Logo">
-        </div>
-        <button class="donate-btn">
-            <a href= "donate.html">Donate</a>
-        </button>
-    </header>
 
-    <main>
-        <div class="content">
-            
-            <div class="content-wrapper">
-                <div class="logo-tagline">
-                    <div class="logo-large">
-                        <h1>Wintima Foundation</h1>
-                        <img src="/images/logo.png" alt="Wintima Foundation Large Logo">
-                    </div>
-                    <p class="tagline">restoring smiles<br>impacting lives</p>
-                </div>
-                <div class="divider"></div>
-                <div class="slideshow">
-                    <img src="/images/announcement.png" alt="Slideshow Image 1" class="active">
-                    <img src="/images/borehole.png" alt="Slideshow Image 2">
-                    <img src="/images/furniture.png" alt="Slideshow Image 3">
-                </div>
-            </div>
-        </div>
-        
-        <div id="description" class="description-menu-toggle">Click here to get started</div>
+  <header>
+    <div class="logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <img src="images/logo.png" alt="Wintima Foundation">
+        <span class="logo-name">Wintima Foundation</span>
+    </a>
+</div>
+<button class="donate-btn" onclick="window.location.href='donate.html'">
+    Donate
+</button>
+</header>
 
-        <nav class="menu-toggle">
-            <button id="menuBtn"><i class="fas fa-plus"></i></button>
-        </nav>
+<main>
 
-        <nav class="menu">
-            <ul>
-                <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
-                <li><a href="events.html"><i class="fas fa-calendar"></i> Events</a></li>
-                <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
-                <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-                <li><a href="join.html"><i class="fas fa-handshake"></i> Join Us</a></li>
-            </ul>
-        </nav>
-    </main>
+    <div class="hero">
+      <h1>restoring <em>smiles</em><br>impacting lives</h1>
+  </div>
 
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/wintima.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:wintimafoundation@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        </div>
-    </footer>
+<!-- ═══ UPDATE FOR EACH PROJECT: 
+change image src, label, title, sub ═══ -->
 
-    <script src="script.js"></script>
+<div class="spotlight" id="spotlightCard">
+  <img src="images/furniture.png" alt="School Refurbishment Project">
+  <div class="spotlight-overlay">
+    <p class="spotlight-label">Yizidug Basic School &middot; Upper East Region, Ghana</p>
+    <p class="spotlight-title">School Refurbishment Project</p>
+    <p class="spotlight-sub">Desks &middot; Classroom painting &middot; Windows</p>
+    <button class="spotlight-more" id="learnMoreBtn">Learn more →</button>
+</div>
+</div>
+
+
+<!-- Event overlay --> <!-- ═══ UPDATE FOR EACH PROJECT ═══ -->
+<div class="event-overlay" id="eventOverlay" aria-modal="true" role="dialog">
+  <div class="event-modal">
+    <button class="event-close" id="eventClose" aria-label="Close">✕</button>
+
+    <p class="section-label">Upcoming Project</p>
+    <h2>School Refurbishment — Yizidug Basic School</h2>
+    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Yizidug, Upper East Region, Ghana</p>
+
+    <p class="event-body">Yizidug Basic School currently faces serious infrastructural challenges. Broken classroom doors, damaged windows, and leaking roofs are adversely affecting teaching and learning. At present, pupils sit on the floor during lessons — a condition that undermines their ability to focus and thrive.</p>
+
+    <p class="event-body">Wintima Foundation is raising funds to fully refurbish the school — repairing doors, windows, and roofs across six classrooms, painting the classrooms, and supplying <strong>50 dual desks</strong> so every pupil has a proper place to learn.</p>
+
+    <div class="event-breakdown">
+      <p class="breakdown-title">Estimated Cost Breakdown</p>
+      <table class="breakdown-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Cost (GHS)</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Classroom Doors</td>
+        <td>Repair and replace broken doors for 6 classrooms</td>
+        <td>12,000</td>
+    </tr>
+    <tr>
+        <td>Windows</td>
+        <td>Replacement and fixing of damaged frames</td>
+        <td>10,000</td>
+    </tr>
+    <tr>
+        <td>Roofing</td>
+        <td>Repair of leaking roofs for classrooms</td>
+        <td>10,000</td>
+    </tr>
+    <tr>
+        <td>Labour &amp; Misc.</td>
+        <td>Skilled labour, transportation, painting of 6 classrooms</td>
+        <td>18,000</td>
+    </tr>
+    <tr class="breakdown-total">
+        <td colspan="2">Total</td>
+        <td>50,000</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<button class="event-donate-btn" onclick="window.location.href='donate.html'">
+  Support this project →
+</button>
+</div>
+</div>
+
+<div class="explore-wrap">
+  <button class="explore-btn" id="exploreBtn" aria-expanded="false">
+    <span>Explore</span>
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+  </div>
+</button>
+<nav class="menu" id="menu" aria-label="Site navigation">
+    <ul>
+      <li><a href="blog.html"><i class="fas fa-pen"></i> Blog</a></li>
+      <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+      <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+  </ul>
+</nav>
+</div>
+
+</main>
+
+<footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/wintima.foundation/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:wintimafoundation@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+</footer>
+
+<script>
+    const exploreBtn = document.getElementById('exploreBtn');
+    const menu = document.getElementById('menu');
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    const eventOverlay = document.getElementById('eventOverlay');
+    const eventClose = document.getElementById('eventClose');
+
+    exploreBtn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      exploreBtn.setAttribute('aria-expanded', isOpen);
+  });
+
+    learnMoreBtn.addEventListener('click', () => {
+      eventOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+  });
+
+    eventClose.addEventListener('click', closeOverlay);
+    eventOverlay.addEventListener('click', (e) => {
+      if (e.target === eventOverlay) closeOverlay();
+  });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeOverlay();
+  });
+
+    function closeOverlay() {
+      eventOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+  }
+</script>
+
 </body>
 </html>
