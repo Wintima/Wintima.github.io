@@ -175,8 +175,8 @@ main {
 }
 
 .explore-btn {
-  background: rgba(128,20,23,0.12);
-border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.15);
+border: 1px solid var(--surface);
 color: var(--red);
   border-radius: 500px;
   padding: 8px 20px;
@@ -193,7 +193,7 @@ color: var(--red);
 }
 
 .explore-btn:hover {
-  border-color: var(--surface);
+  border-color: var(--red);
   color: var(--red);
 }
 
