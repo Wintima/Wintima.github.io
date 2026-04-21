@@ -5,6 +5,17 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate — Wintima Foundation</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2256Y8WHBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2256Y8WHBZ');
+  </script>
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/donate.css">
   <script src="https://kit.fontawesome.com/89de98646e.js" crossorigin="anonymous"></script>
@@ -16,78 +27,78 @@
       <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
         <img src="images/logo.png" alt="Wintima Foundation">
         <span class="logo-name">Wintima Foundation</span>
-    </a>
-</div>
-</header>
+      </a>
+    </div>
+  </header>
 
-<div class="pill-wrap">
+  <div class="pill-wrap">
     <nav class="top-pill" aria-label="Site navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="gallery.html">Gallery</a>
       <a href="team.html">Team</a>
-  </nav>
-</div>
+    </nav>
+  </div>
 
-<main class="donate-main">
+  <main class="donate-main">
 
     <div class="donate-header">
       <p class="section-label">Support Us</p>
       <h2>Every contribution keeps<br>a child in school.</h2>
       <p class="donate-sub">Wintima Foundation is volunteer-run. <br>Every pesewa goes directly to children in rural communities across Ghana.</p>
-  </div>
+    </div>
 
-  <div class="donate-options">
+    <div class="donate-options">
 
       <!-- GoFundMe -->
       <div class="donate-card donate-card--soon" target="_blank">
         <div class="donate-card-icon">
           <i class="fas fa-hand-holding-heart"></i>
-      </div>
-      <div class="donate-card-body">
+        </div>
+        <div class="donate-card-body">
           <p class="donate-card-title">GoFundMe</p>
           <p class="donate-card-desc">Donate online via our GoFundMe campaign.</p>
+        </div>
+        <span class="donate-card-badge">Soon</span>
       </div>
-      <span class="donate-card-badge">Soon</span>
-  </div>
 
-  <!-- Mobile Money -->
-  <div class="donate-card" id="momoCard" onclick="toggleMomo()">
-    <div class="donate-card-icon">
-      <i class="fas fa-mobile-alt"></i>
-  </div>
-  <div class="donate-card-body">
-      <p class="donate-card-title">Mobile Money</p>
-      <p class="donate-card-desc">Send via MTN Mobile Money.</p>
-  </div>
-  <span class="donate-card-arrow" id="momoArrow">→</span>
-</div>
+      <!-- Mobile Money -->
+      <div class="donate-card" id="momoCard" onclick="toggleMomo()">
+        <div class="donate-card-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="donate-card-body">
+          <p class="donate-card-title">Mobile Money</p>
+          <p class="donate-card-desc">Send via MTN Mobile Money.</p>
+        </div>
+        <span class="donate-card-arrow" id="momoArrow">→</span>
+      </div>
 
-<div class="momo-details" id="momoDetails">
-    <div class="momo-row">
-      <span class="momo-label">Network</span>
-      <span class="momo-value">MTN Mobile Money</span>
-  </div>
-  <div class="momo-row">
-      <span class="momo-label">Number</span>
-      <span class="momo-value">+233 54 976 4925</span>
-  </div>
-  <div class="momo-row">
-      <span class="momo-label">Name</span>
-      <span class="momo-value">Zeylisa Janet Dauda</span>
-  </div>
-  <p class="momo-note">Please send us an email after your transfer so we can acknowledge your donation.</p>
-</div>
+      <div class="momo-details" id="momoDetails">
+        <div class="momo-row">
+          <span class="momo-label">Network</span>
+          <span class="momo-value">MTN Mobile Money</span>
+        </div>
+        <div class="momo-row">
+          <span class="momo-label">Number</span>
+          <span class="momo-value">+233 54 976 4925</span>
+        </div>
+        <div class="momo-row">
+          <span class="momo-label">Name</span>
+          <span class="momo-value">Zeylisa Janet Dauda</span>
+        </div>
+        <p class="momo-note">Please send us an email after your transfer so we can acknowledge your donation.</p>
+      </div>
 
 <!-- Card -->
 <div class="donate-card donate-card--soon">
-    <div class="donate-card-icon">
-      <i class="fas fa-credit-card"></i>
+  <div class="donate-card-icon">
+    <i class="fas fa-credit-card"></i>
   </div>
   <div class="donate-card-body">
-      <p class="donate-card-title">Debit / Credit Card</p>
-      <p class="donate-card-desc">Online card payments coming soon.</p>
+    <p class="donate-card-title">Debit / Credit Card</p>
+    <p class="donate-card-desc">Online card payments coming soon.</p>
   </div>
   <span class="donate-card-badge">Soon</span>
 </div>
@@ -118,27 +129,28 @@
 </main>
 
 <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/wintima-foundation/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://www.instagram.com/wintima.foundation/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
+      <i class="fab fa-instagram"></i>
     </a>
     <a href="mailto:wintimafoundation@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </a>
-</div>
+  </div>
 </footer>
 
 <script>
-    function toggleMomo() {
-      const details = document.getElementById('momoDetails');
-      const arrow = document.getElementById('momoArrow');
-      const isOpen = details.classList.toggle('open');
-      arrow.textContent = isOpen ? '↓' : '→';
+  function toggleMomo() {
+    const details = document.getElementById('momoDetails');
+    const arrow = document.getElementById('momoArrow');
+    const isOpen = details.classList.toggle('open');
+    arrow.textContent = isOpen ? '↓' : '→';
   }
 </script>
+<script src="js/cookie.js"></script>
 
 </body>
 </html>
